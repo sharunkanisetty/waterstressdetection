@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Water Stress Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Flask static CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="logo">🌿 AgroSense</div>
+        <ul class="nav-links">
+            <li>Home</li>
+            <li>Predict</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <h1>Water Stress Detection</h1>
+        <p>
+            AI-powered analysis of thermal images to identify
+            plant water stress with confidence.
+        </p>
+    </section>
+
+    <!-- ===== MAIN CARD ===== -->
+    <section class="card">
+        <h2>Upload Thermal Image</h2>
+
+        <input type="file" id="imageInput" accept="image/*">
+
+        <button onclick="predict()">Analyze Image</button>
+
+        <div id="resultBox">
+            <p id="output"></p>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>Final Year Project • AI & Machine Learning</p>
+    </footer>
+
+    <!-- Flask static JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
